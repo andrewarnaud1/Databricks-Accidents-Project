@@ -2,7 +2,7 @@
 
 ## Présentation du Projet
 
-Ce projet a été réalisé dans le cadre de l'examen de fin de semestre du cours sur la science des données. L'objectif est d'utiliser Azure Databricks pour importer, traiter, et construire un modèle prédictif basé sur les données d'accidents de la route. Ce modèle est ensuite hébergé sur Azure pour permettre une utilisation via une API.
+Ce projet a été réalisé dans le cadre de l'examen de fin de semestre du cours Formation sur un framework cloud (e.g. Azure) + Formation sur Git. L'objectif est d'utiliser Azure Databricks pour importer, traiter, et construire un modèle prédictif basé sur les données d'accidents de la route. Ce modèle est ensuite hébergé sur Azure pour permettre une utilisation via une API.
 
 ## Sources des Données
 
@@ -16,11 +16,11 @@ Les données utilisées pour ce projet proviennent des travaux de recherche d'Il
 
 ## Modèle Retenu et Ses Performances
 
-Parmi les modèles testés (KNeighborsClassifier, DecisionTreeClassifier, RandomForestClassifier), le modèle `RandomForestClassifier` a été retenu comme étant le plus performant en termes d'accuracy et de f1-score. Après optimisation avec `GridSearchCV`, les paramètres sélectionnés ont été `n_estimators=100`, `max_depth=10`, et `min_samples_leaf=2`. Les performances détaillées du modèle sont documentées dans le notebook `Modelisation.dbc`.
+Parmi les modèles testés (KNeighborsClassifier, DecisionTreeClassifier, RandomForestClassifier), le modèle `DecisionTreeClassifier` a été retenu comme étant le plus performant en termes d'accuracy et de f1-score. Après optimisation avec `GridSearchCV`, les paramètres sélectionnés ont été `max_depth=7`, et `min_samples_leaf=3`. Les performances détaillées du modèle sont documentées dans le notebook `Modelisation.dbc`.
 
 ## Endpoint du Modèle
 
-Le modèle est accessible via un endpoint API, permettant une utilisation facile des prédictions. Le lien de l'endpoint est le suivant : `<lien-vers-l'endpoint>`
+Le modèle est accessible via un endpoint API, permettant une utilisation facile des prédictions. Le lien de l'endpoint est le suivant : `https://adb-5282541070975571.11.azuredatabricks.net/serving-endpoints/bestClassifier/invocations`
 
 ## Liens Utiles
 
